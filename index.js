@@ -23,7 +23,7 @@ const replaceVal = (tempVal, orgVal) => {
 const server = http.createServer((req, res) => {
     if (req.url == "/") {
         requests(
-            "http://api.openweathermap.org/data/2.5/weather?q=Mirzapur&units=metric&appid=2dea1be0259bc5efdb666cfc09839815"
+            "http://api.openweathermap.org/data/2.5/weather?q=Mirzapur&units=metric&appid={$apikey}"
         )
             .on("data", (chunk) => {
                 // console.log(chunk);
